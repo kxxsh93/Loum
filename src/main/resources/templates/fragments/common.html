@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"-->
+  <!--        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">-->
+  <!--  &lt;!&ndash;  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">&ndash;&gt;-->
+  <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+  <!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!— Google fonts—>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+
+  <link href="css/style.css"  type="text/css" rel="stylesheet">
+  <link th:href="@{css/style.css}" type="text/css" rel="stylesheet">
+  <noscript><link th:href="@{css/nonscript.css}" type="text/css" rel="stylesheet"></noscript>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.scrolly.min.js"></script>
+  <script src="/js/browser.min.js"></script>
+  <script src="/js/breakpoints.min.js"></script>
+  <script src="/js/util.js"></script>
+  <script src="/js/main.js"></script>
+  <title th:text="${title}">Hello, Spring Boot!</title>
+  <style>
+       a { text-decoration: none  }
+    a:link { text-decoration: none  }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+       .navbar-light .navbar-nav > .nav-link {
+           color: black;
+           font-size: 25px;
+           font-weight: 400;
+
+
+
+       }
+
+       .navbar-light .navbar-nav .active> .nav-link {
+           color: #2d5c9e;
+           font-size: 25px;
+           font-weight: 600;
+
+
+
+       }
+
+
+  </style>
+</head>
+<body>
+<!--<nav class="navbar navbar-expand-md navbar-light  fixed-top" th:fragment="menu(menu)" style="background-color: #ffffff;">-->
+<!--&lt;!&ndash;  <a class="navbar-brand" href="#"><img src="../../static/img/logo.png">로움세무법인</a>&ndash;&gt;-->
+<!--  <a class="navbar-brand" href="#">-->
+<!--    <img src="../../static/img/pic01.jpg" width="30" height="30" class="d-inline-block align-top" alt="">-->
+<!--    Bootstrap-->
+<!--  </a>-->
+<!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--    <span class="navbar-toggler-icon"></span>-->
+<!--  </button>-->
+
+
+<!--  <div  class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--    <ul class="navbar-nav mr-auto ">-->
+<!--      <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">-->
+<!--        <a class="nav-link" href="#" th:href="@{/}">홈 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>-->
+<!--      </li>-->
+<!--      <li class="nav-item" th:classappend="${menu} == 'board'? 'active'">-->
+<!--        <a class="nav-link" href="#" th:href="@{/list}">업무범위 <span class="sr-only" th:if="${menu} == 'board'">(current)</span></a>-->
+<!--      </li>-->
+<!--      <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">-->
+<!--        <a class="nav-link" href="#" th:href="@{/}">구성원 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>-->
+<!--      </li>-->
+<!--      <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">-->
+<!--        <a class="nav-link" href="#" th:href="@{/}">이력 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>-->
+<!--      </li>-->
+<!--      <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">-->
+<!--        <a class="nav-link" href="#" th:href="@{/}">오시는길 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>-->
+<!--      </li>-->
+
+<!--    </ul>-->
+
+<!--  </div>-->
+
+
+<!--</nav>-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light rounded" th:fragment="menu(menu)">
+  <img src="/img/logo.png" width="150px"/ >
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-md-around" id="navbarsExample10">
+    <!--      <img src="/img/logo.png" width="150px" alt="" />-->
+    <ul class="navbar-nav">
+
+      <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">
+        <a class="nav-link"  th:href="@{/}" >홈<span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
+      </li>
+      <li class="nav-item" th:classappend="${menu} == 'board'? 'active'">
+        <a class="nav-link"  th:href="@{/list}">업무범위 <span class="sr-only" th:if="${menu} == 'board'">(current)</span></a>
+      </li>
+      <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">
+        <a class="nav-link"  th:href="@{/}">구성원 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
+      </li>
+      <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">
+        <a class="nav-link"  th:href="@{/}">이력 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
+      </li>
+      <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">
+        <a class="nav-link" th:href="@{/}">오시는길 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+</body>
+</html>
