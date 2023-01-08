@@ -236,6 +236,15 @@ color: rgb(45, 92, 158);}
         text-align: left;
         font-weight: bold;
 	}
+    h8 {
+        font-size: 1.0rem;
+        text-align: left;
+        margin: 0 0 2rem 0;
+    }
+    p1 {
+        font-size: 15px;
+        text-align:left;
+    }
 
 	sub {
 		font-size: 0.8rem;
