@@ -18,4 +18,5 @@ public class Specialist {
     private String name;
     private String email;
     private String career;
+    private String image;
 }
