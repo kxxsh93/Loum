@@ -73,6 +73,10 @@ div.content2 {
   margin:0 auto;
 }
 
+p.locationT {
+  margin: 0 0 0 0;
+}
+
   </style>
 </head>
 
@@ -89,8 +93,11 @@ div.content2 {
   </div>
 </section>
 
-<!--<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">-->
-<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right" style="padding : 5em;">
+<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+  <div class="content">
+    <p><strong><span style="font-size: 20px;">세무법인 로움 주소</span></strong><p>
+    <p class="locationT"><span style="font-size: 15px;">서울특별시 강남구 도곡로 117 옥신타워 6층</br>117, Dogok-ro, Gangnam-gu, Seoul</br>TEL : 02-0000-0000 | FAX : 02-0000-0000</br>E-mail : 0000@0000.com</span></p>
+  </div>
   <div class="image">
     <div id="map" style="width: 100%; height:100%;"></div>
     <!-- Kakao Map API Key -->
@@ -135,68 +142,90 @@ div.content2 {
 
       </script>
   </div>
-  
-  <div class="content">
-    <h7 style="font-size: 20px;">세무법인 로움 주소</h7>
-    </br></br>
-    <p1>
-      <span> 서울특별시 강남구 도곡로 117 옥신타워 6층</br>117, Dogok-ro, Gangnam-gu, Seoul</br>TEL : 02-0000-0000 | FAX : 02-0000-0000</br>E-mail : 0000@0000.com</span>
-    </p1>
-  </div>
 </section>
 
+<!--<div id="contents">
+  <section style="padding:3em 10em 3em 10em">
+    <div class="content1" style="padding:2em 0 2em 4em">
+      <p><strong><span style="font-size: 20px;">세무법인 로움 주소</span></strong><p>
+        <p class="locationT"><span style="font-size: 15px;">서울특별시 강남구 도곡로 117 옥신타워 6층</br>117, Dogok-ro, Gangnam-gu, Seoul</br>TEL : 02-0000-0000 | FAX : 02-0000-0000</br>E-mail : 0000@0000.com</span></p>    </div>
+    <div class="content2" id="mapCont">
+      <div id="map" style="height:350px;"></div>
+      &lt;!&ndash; Kakao Map API Key &ndash;&gt;
+      <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b019280304774ec961808b3a9f4846cb&libraries=services"></script>
+      <script>
+        var mapContainer = document.getElementById('map'); // 지도를 표시할 div
+        var mapOption = {
+                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+        };
 
+        // 지도를 표시할 div와 지도 옵션으로 지도를 생성합니다
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+
+        // 주소-좌표 변환 객체를 생성합니다
+        var geocoder = new kakao.maps.services.Geocoder();
+
+        // 주소로 좌표를 검색합니다
+        geocoder.addressSearch('서울 강남구 도곡로 117 옥신타워 6층', function(result, status) {
+
+        // 정상적으로 검색이 완료됐으면
+        if (status === kakao.maps.services.Status.OK) {
+
+          var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+          // 결과값으로 받은 위치를 마커로 표시합니다
+          var marker = new kakao.maps.Marker({
+              map: map,
+              position: coords
+          });
+
+          // 인포윈도우로 장소에 대한 설명을 표시합니다
+          var infowindow = new kakao.maps.InfoWindow({
+              content: '<div style="width:150px;text-align:center;padding:6px 0;">세무법인 로움</div>'
+          });
+          infowindow.open(map, marker);
+
+          // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+          map.setCenter(coords);
+          }
+      });
+
+      </script>
+    </div>
+  </section>
+</div>-->
 <!-- Footer -->
-<div doz_type="grid" doz_grid="12" class="col-dz col-dz-12">
-  <div doz_type="widget" id="w201904175cb6beb61b48c">
-    <div class="_widget_data " data-widget-name="텍스트" data-widget-type="text" data-widget-anim="none" data-widget-anim-duration="" data-widget-anim-delay="" data-widget-parent-is-mobile="N">
-      <div doz_type="text" class="widget _text_wrap widget_text_wrap fr-view  default_padding " id="text_w201904175cb6beb61b48c">
-        <div class="text-table ">
-          <div>
-            <table class="noBorder" style="width: 100%;">
-              <tbody><tr>
-                <td style="width: 19.8214%; vertical-align: top;">
-                  <a href="https://loumtax.com/">
-                    <img class="fr-fin fr-dii" src="/img/Sub LOGO 3.png" width="120px" style="margin : 10px 10px 10px 50px">
-                  </a>
-                </td>
-                <td style="width: 59.5536%;">
-                  <p style="text-align: center;">
-                    <span style="font-size: 14px; color: rgb(153, 153, 153);">서울 강남구 도곡로 117 옥신타워 6층&nbsp; |&nbsp;&nbsp;</span>
-                    <span style="color: rgb(153, 153, 153);">
-                  <span style="font-size: 14px;">대표자 : 김무현 &nbsp;| &nbsp;사업자번호 : xxx-xx-xxxxx&nbsp;</span></span></br>
-                    <!--              </p>-->
-                    <!--              <p style="text-align: left;"><span style="color: rgb(153, 153, 153);">-->
-                    <span style="font-size: 14px; color: rgb(153, 153, 153);">TEL : 02-6284-3500&nbsp; |&nbsp; FAX : 02-6284-3501&nbsp; | &nbsp;</span>
-                    <span style="color: rgb(153, 153, 153);">
-                  <span style="font-size: 14px;">E-mail : <a href="mailto:acc@loumtax.com">acc@loumtax.com</a>&nbsp; | &nbsp;</span></span></br>
-                    <span style="color: rgb(153, 153, 153);"><span style="font-size: 12px;">Copyright 2023. Loum All Rights Reserved.</span></span></p>
-                  <!--              <p><span style="color: rgb(153, 153, 153);"><br></span></p>-->
-                  <br></td>
-                <td style="width: 9.2143%; text-align: left;"><br></td>
-                <td style="width: 8.5536%; text-align: left; vertical-align: top;"></td>
-              </tr></tbody></table></div></div>
-      </div>
+<footer class="wrapper style1 align-center">
+  <div class="inner">
+    <ul class="icons">
+      <li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+      <li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+      <li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+      <li><a href="#" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+      <li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+    </ul>
+    <p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+  </div>
+</footer>
 
-    </div></div></div>
+  <!-- Scripts -->
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.scrolly.min.js"></script>
+  <script src="/js/browser.min.js"></script>
+  <script src="/js/breakpoints.min.js"></script>
+  <script src="/js/util.js"></script>
+  <script src="/js/main.js"></script>
 
-<!-- Scripts -->
-<script src="/js/jquery.min.js"></script>
-<script src="/js/jquery.scrolly.min.js"></script>
-<script src="/js/browser.min.js"></script>
-<script src="/js/breakpoints.min.js"></script>
-<script src="/js/util.js"></script>
-<script src="/js/main.js"></script>
-
-<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"-->
-<!--        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"-->
-<!--        crossorigin="anonymous"></script>-->
-<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"-->
-<!--        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"-->
-<!--        crossorigin="anonymous"></script>-->
-<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"-->
-<!--        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"-->
-<!--        crossorigin="anonymous"></script>-->
+  <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"-->
+  <!--        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"-->
+  <!--        crossorigin="anonymous"></script>-->
+  <!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"-->
+  <!--        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"-->
+  <!--        crossorigin="anonymous"></script>-->
+  <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"-->
+  <!--        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"-->
+  <!--        crossorigin="anonymous"></script>-->
 </body>
 
 </html>
