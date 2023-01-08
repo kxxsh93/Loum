@@ -18,8 +18,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   <!— Google fonts—>
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+  <!--  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />-->
+  <!--  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />-->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet"/>
 
   <link href="css/style.css"  type="text/css" rel="stylesheet">
   <link th:href="@{css/style.css}" type="text/css" rel="stylesheet">
@@ -66,17 +67,6 @@ a:active { text-decoration: none; }
   </style>
 </head>
 <body>
-<!--<nav class="navbar navbar-expand-md navbar-light  fixed-top" th:fragment="menu(menu)" style="background-color: #ffffff;">-->
-<!--&lt;!&ndash;  <a class="navbar-brand" href="#"><img src="../../static/img/logo.png">로움세무법인</a>&ndash;&gt;-->
-<!--  <a class="navbar-brand" href="#">-->
-<!--    <img src="../../static/img/pic01.jpg" width="30" height="30" class="d-inline-block align-top" alt="">-->
-<!--    Bootstrap-->
-<!--  </a>-->
-<!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--    <span class="navbar-toggler-icon"></span>-->
-<!--  </button>-->
-
-
 <!--  <div  class="collapse navbar-collapse" id="navbarSupportedContent">-->
 <!--    <ul class="navbar-nav mr-auto ">-->
 <!--      <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">-->
@@ -102,8 +92,9 @@ a:active { text-decoration: none; }
 
 <!--</nav>-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light rounded" th:fragment="menu(menu)">
-  <img src="/img/logo.png" width="150px"/ >
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+  <img src="/img/logo.png" width="150px" style="margin : 10px 10px 10px 50px">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation"
+  style="">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -117,14 +108,14 @@ a:active { text-decoration: none; }
       <li class="nav-item" th:classappend="${menu} == 'board'? 'active'">
         <a class="nav-link"  th:href="@{/list}">업무범위 <span class="sr-only" th:if="${menu} == 'board'">(current)</span></a>
       </li>
-      <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">
-        <a class="nav-link"  th:href="@{/}">구성원 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
+      <li class="nav-item" th:classappend="${menu} == 'member'? 'active'">
+        <a class="nav-link"  th:href="@{/member}">구성원 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
       </li>
-      <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">
-        <a class="nav-link"  th:href="@{/}">이력 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
+      <li class="nav-item" th:classappend="${menu} == 'resume'? 'active'">
+        <a class="nav-link"  th:href="@{/resume}">이력 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
       </li>
-      <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">
-        <a class="nav-link" th:href="@{/}">오시는길 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
+      <li class="nav-item" th:classappend="${menu} == 'howtocome'? 'active'">
+        <a class="nav-link" th:href="@{/howtocome}">오시는길 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
       </li>
     </ul>
   </div>

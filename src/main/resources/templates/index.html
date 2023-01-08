@@ -1,7 +1,7 @@
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="fragments/common :: head('OO회계법인페이지')">
+<head th:replace="fragments/common :: head('LoumTax')">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,10 +19,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   <!— Google fonts—>
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+<!--  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />-->
+<!--  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />-->
 
-  <!--  <link href="css/style.css"  type="text/css" rel="stylesheet">-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/style.css"  type="text/css" rel="stylesheet">
   <link th:href="@{css/style.css}" type="text/css" rel="stylesheet">
   <noscript><link th:href="@{css/nonscript.css}" type="text/css" rel="stylesheet"></noscript>
 
@@ -43,107 +46,185 @@ a:visited { text-decoration: none;
 
 a:hover { text-decoration: none; }
 
-
 a:active { text-decoration: none; }
+
   </style>
 </head>
 
 <body class="is-preload">
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('home')"></nav>
 
+<!--20221229 Header 임시로 주석처리-->
 <!-- Header -->
-<section id="header">
-  <div class="container">
-    <span class="icon solid major fa-cloud"></span>
-    <h1>소매금융 산업의 미래 : 다섯 가지 시나리오<br /></h1>
-    <p>소매금융 산업의 주요 트렌드 변화로 전통적 금융 비즈니스 모델이 변화함에 따라 <br />
-      PwC는 10년 후 소매금융의 미래에 대한 예측 및 기업들의 대응 방안을 제시하였습니다.</p>
-    <ul class="actions special">
-      <li><a href="#one" class="button scrolly">Discover</a></li>
-    </ul>
-  </div>
-</section>
 
-<!-- One -->
-<section id="one" class="main style1">
-  <div class="container">
-    <div class="row gtr-150">
-      <div class="col-6 col-12-medium">
-        <header class="major">
-          <h2>Lorem ipsum dolor adipiscing<br />
-            amet dolor consequat</h2>
-        </header>
-        <p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
-      </div>
-      <div class="col-6 col-12-medium imp-medium">
-        <span class="image fit"><img src="/img/pic01.jpg" alt="" /></span>
+<!--<section id="header">-->
+<!--  <div class="container">-->
+<!--    <span class="icon solid major fa-cloud"></span>-->
+<!--    <h1>소매금융 산업의 미래 : 다섯 가지 시나리오<br /></h1>-->
+<!--    <p>소매금융 산업의 주요 트렌드 변화로 전통적 금융 비즈니스 모델이 변화함에 따라 <br />-->
+<!--      PwC는 10년 후 소매금융의 미래에 대한 예측 및 기업들의 대응 방안을 제시하였습니다.</p>-->
+<!--    <ul class="actions special">-->
+<!--      <li><a href="#one" class="button scrolly">Discover</a></li>-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--</section>-->
+<div id="wrapper" class="divided">
+  <!-- One -->
+  <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right" style="padding:3em">
+    <div class="content">
+                <h2>세무법인 Loum.</h2>
+                 <h2> 병의원 세무 전문 </h2>
+      <p class="major">개원 후 첫 3년, 자문 세무사에 따라 세금에 큰 차이가 생길 수 있는 시기입니다. 한번 확정된 세금은 돌려받는 것이 쉽지 않습니다.<br/>
+ 병의원 세무는 병의원 세무 전문가에게 위임하는 것이 현명합니다.</p>
+              <ul class="actions stacked">
+                <li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
+              </ul>
+            </div>
+            <div class="image">
+              <img src="/img/thumbs.jpeg" alt=""/>
+            </div>
+          </section>
+
+          <!-- Items -->
+  <section class="wrapper style1 align-center">
+    <div class="inner">
+<!--      <h2>Items</h2>-->
+<!--      <p>This is an <strong>Items</strong> element, and it's basically just a grid for organizing items of various types. You can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-items">details</a>).</p>-->
+<!--      -->
+      <div class="items style1 medium onscroll-fade-in">
+        <section>
+
+          <h3>Office</h3>
+          <hr style="border-top-width:1px; border-color:#363636;">
+          <p>xxx는 최고의 전문가 집단을 지향합니다.<br/>
+            고객의 기대를 넘어서 최고의 만족을 드리겠습니다.</p>
+          <hr style="border-top-width:1px; border-color:#363636;">
+          <span class ='home_link' style="color: rgb(45, 92, 158);"><a th:href="@{/list}" class ='home_link'>&gt; more</a></span>
+        </section>
+        <section>
+
+          <h3 class="hh">Service</h3>
+          <hr style="border-top-width:1px; border-color:#363636;">
+          <p>xxx는 전문가의 풍부한 경험과 노하우를 바탕으로
+
+            고객의 가치를 극대화하는 서비스를 제공합니다.</p>
+          <hr style="border-top-width:1px; border-color:#363636;">
+          <span class ='home_link' style="color: rgb(45, 92, 158);"><a th:href="@{/list}" class ='home_link'>&gt; more</a></span>
+        </section>
+        <section>
+
+          <h3>Specialist</h3>
+          <hr style="border-top-width:1px; border-color:#363636;">
+          <p>xxx는 국세청과 기업 출신, 변호사/회계사/세무사 등
+
+            각 분야 최고의 전문가들이 모여 있습니다.</p>
+          <hr style="border-top-width:1px; border-color:#363636;">
+          <span class ='home_link' style="color: rgb(45, 92, 158);"><a th:href="@{/list}" class ='home_link'>&gt; more</a></span>
+        </section>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+
+  <!-- One -->
+
+<!--<section id="one" class="main style1">-->
+<!--  <div class="container">-->
+<!--    <div class="row gtr-150">-->
+<!--      <div class="col-6 col-12-medium">-->
+<!--        <header class="major">-->
+<!--          <h2>세무법인 Loum.</h2>-->
+<!--           <h2> 병의원 세무 전문 </h2>-->
+<!--        </header>-->
+<!--        <p >개원 후 첫 3년, 자문 세무사에 따라 세금에 큰 차이가 생길 수 있는 시기입니다. 한번 확정된 세금은 돌려받는 것이 쉽지 않습니다.<br/>-->
+<!--          병의원 세무는 병의원 세무 전문가에게 위임하는 것이 현명합니다.</p>-->
+<!--&lt;!&ndash;        <span class="image fit"><p align="right"></p> <img src="/img/thumbs.jpeg" alt=""/></span>&ndash;&gt;-->
+<!--      </div>-->
+<!--      <div class="col-6 col-12-medium">-->
+<!--        <span class="image fit"><p align="right"><img src="/img/thumbs.jpeg" alt="" /></span>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 
 <!-- Two -->
-<section id="two" class="main style2">
-  <div class="container">
-    <div class="row gtr-150">
-      <div class="col-6 col-12-medium">
-        <ul class="major-icons">
-          <li><span class="icon solid style1 major fa-code"></span></li>
-          <li><span class="icon solid style2 major fa-bolt"></span></li>
-          <li><span class="icon solid style3 major fa-camera-retro"></span></li>
-          <li><span class="icon solid style4 major fa-cog"></span></li>
-          <li><span class="icon solid style5 major fa-desktop"></span></li>
-          <li><span class="icon solid style6 major fa-calendar"></span></li>
-        </ul>
-      </div>
-      <div class="col-6 col-12-medium">
-        <header class="major">
-          <h2>Lorem ipsum dolor adipiscing<br />
-            amet dolor consequat</h2>
-        </header>
-        <p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
-        <p>Blandit faucibus proin. Ac aliquam integer adipiscing enim non praesent vis commodo nunc phasellus cubilia ac risus accumsan. Accumsan blandit. Lobortis phasellus non lobortis dit varius mi varius accumsan lobortis. Blandit ante aliquam lacinia lorem lobortis semper morbi col faucibus vitae integer placerat accumsan orci eu mi odio tempus adipiscing adipiscing adipiscing curae consequat feugiat etiam dolore.</p>
-        <p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<!--20221229 주석처리-->
+<!--<section id="two" class="main style2">-->
+<!--  <div class="container">-->
+<!--    <div class="row gtr-150">-->
+<!--      <div class="col-6 col-12-medium">-->
+<!--        <ul class="major-icons">-->
+<!--          <li><span class="icon solid style1 major fa-code"></span></li>-->
+<!--          <li><span class="icon solid style2 major fa-bolt"></span></li>-->
+<!--          <li><span class="icon solid style3 major fa-camera-retro"></span></li>-->
+<!--          <li><span class="icon solid style4 major fa-cog"></span></li>-->
+<!--          <li><span class="icon solid style5 major fa-desktop"></span></li>-->
+<!--          <li><span class="icon solid style6 major fa-calendar"></span></li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--      <div class="col-6 col-12-medium">-->
+<!--        <header class="major">-->
+<!--          <h2>Lorem ipsum dolor adipiscing<br />-->
+<!--            amet dolor consequat</h2>-->
+<!--        </header>-->
+<!--        <p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>-->
+<!--        <p>Blandit faucibus proin. Ac aliquam integer adipiscing enim non praesent vis commodo nunc phasellus cubilia ac risus accumsan. Accumsan blandit. Lobortis phasellus non lobortis dit varius mi varius accumsan lobortis. Blandit ante aliquam lacinia lorem lobortis semper morbi col faucibus vitae integer placerat accumsan orci eu mi odio tempus adipiscing adipiscing adipiscing curae consequat feugiat etiam dolore.</p>-->
+<!--        <p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 
 <!-- Three -->
-<section id="three" class="main style1 special">
-  <div class="container">
-    <header class="major">
-      <h2>Featured</h2>
-    </header>
-    <p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>
-    <div class="row gtr-150">
-      <div th:each="board : ${list}" class="col-4 col-12-medium">
-        <span class="image fit"><img src="/img/pic02.jpg" alt="" /></span>
-        <h3 th:text="${board.title}" >Magna feugiat lorem</h3>
-        <p  th:text="${board.content}" >Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
-        <ul class="actions special">
-          <li><a href="#" class="button">More</a></li>
-        </ul>
-      </div>
-      <!--      <div class="col-4 col-12-medium">-->
-      <!--        <span class="image fit"><img src="/img/pic03.jpg" alt="" /></span>-->
-      <!--        <h3>Magna feugiat lorem</h3>-->
-      <!--        <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>-->
-      <!--        <ul class="actions special">-->
-      <!--          <li><a href="#" class="button">More</a></li>-->
-      <!--        </ul>-->
-      <!--      </div>-->
-      <!--      <div class="col-4 col-12-medium">-->
-      <!--        <span class="image fit"><img src="/img/pic04.jpg" alt="" /></span>-->
-      <!--        <h3>Magna feugiat lorem</h3>-->
-      <!--        <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>-->
-      <!--        <ul class="actions special">-->
-      <!--          <li><a href="#" class="button">More</a></li>-->
-      <!--        </ul>-->
-      <!--      </div>-->
-    </div>
-  </div>
-</section>
+<!--<section id="three" class="main style1 special">-->
+<!--  <div class="container">-->
+<!--    <header class="major">-->
+<!--      <h2>Featured</h2>-->
+<!--    </header>-->
+<!--    <header class="major">-->
+<!--      <h2>Featured</h2>-->
+<!--    </header>-->
+<!--    <header class="major">-->
+<!--      <h2>Featured</h2>-->
+<!--    </header>-->
+<!--    <p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>-->
+<!--    <header class="major">-->
+<!--      <h2>Featured</h2>-->
+<!--    </header>-->
+<!--    <p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>-->
+<!--    <header class="major">-->
+<!--      <h2>Featured</h2>-->
+<!--    </header>-->
+<!--    <p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>-->
+<!--    <div class="row gtr-150">-->
+<!--      <div th:each="board : ${list}" class="col-4 col-12-medium">-->
+<!--        <span class="image fit"><img src="/img/pic02.jpg" alt="" /></span>-->
+<!--        <h3 th:text="${board.title}" >Magna feugiat lorem</h3>-->
+<!--        <p  th:text="${board.content}" >Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>-->
+<!--        <ul class="actions special">-->
+<!--          <li><a href="#" class="button">More</a></li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--            <div class="col-4 col-12-medium">-->
+<!--              <span class="image fit"><img src="/img/pic03.jpg" alt="" /></span>-->
+<!--              <h3>Magna feugiat lorem</h3>-->
+<!--              <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>-->
+<!--              <ul class="actions special">-->
+<!--                <li><a href="#" class="button">More</a></li>-->
+<!--              </ul>-->
+<!--            </div>-->
+<!--            <div class="col-4 col-12-medium">-->
+<!--              <span class="image fit"><img src="/img/pic04.jpg" alt="" /></span>-->
+<!--              <h3>Magna feugiat lorem</h3>-->
+<!--              <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>-->
+<!--              <ul class="actions special">-->
+<!--                <li><a href="#" class="button">More</a></li>-->
+<!--              </ul>-->
+<!--            </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 
 
 <!-- Five -->
@@ -465,18 +546,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 -->
 
 <!-- Footer -->
-<section id="footer">
-  <ul class="icons">
-    <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-    <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-    <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-    <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-    <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-  </ul>
-  <ul class="copyright">
-    <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-  </ul>
-</section>
+  <footer class="wrapper style1 align-center">
+    <div class="inner">
+      <ul class="icons">
+        <li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+        <li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        <li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+      </ul>
+      <p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+    </div>
+  </footer>
+</div>
 
 <!-- Scripts -->
 <script src="/js/jquery.min.js"></script>
