@@ -1,7 +1,7 @@
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<head>
+<head th:replace="fragments/common :: head('OO회계법인페이지')">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -83,7 +83,7 @@ p.locationT {
 <body class="is-preload">
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('location')"></nav>
-
+<Br/>
 <section id="three" class="wrapper style1 align-center">
   <div class="container">
     <header class="major">
@@ -93,14 +93,65 @@ p.locationT {
   </div>
 </section>
 
-<div id="contents">
+<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+  <div class="content">
+    <p><strong><span style="font-size: 20px;">세무법인 로움 주소</span></strong><p>
+    <p class="locationT"><span style="font-size: 15px;">서울특별시 강남구 도곡로 117 옥신타워 6층</br>117, Dogok-ro, Gangnam-gu, Seoul</br>TEL : 02-0000-0000 | FAX : 02-0000-0000</br>E-mail : 0000@0000.com</span></p>
+  </div>
+  <div class="image">
+    <div id="map" style="width: 100%; height:100%;"></div>
+    <!-- Kakao Map API Key -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b019280304774ec961808b3a9f4846cb&libraries=services"></script>
+    <script>
+        var mapContainer = document.getElementById('map'); // 지도를 표시할 div
+        var mapOption = {
+                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+        };
+
+        // 지도를 표시할 div와 지도 옵션으로 지도를 생성합니다
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+
+        // 주소-좌표 변환 객체를 생성합니다
+        var geocoder = new kakao.maps.services.Geocoder();
+
+        // 주소로 좌표를 검색합니다
+        geocoder.addressSearch('서울 강남구 도곡로 117 옥신타워 6층', function(result, status) {
+
+        // 정상적으로 검색이 완료됐으면
+        if (status === kakao.maps.services.Status.OK) {
+
+          var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+          // 결과값으로 받은 위치를 마커로 표시합니다
+          var marker = new kakao.maps.Marker({
+              map: map,
+              position: coords
+          });
+
+          // 인포윈도우로 장소에 대한 설명을 표시합니다
+          var infowindow = new kakao.maps.InfoWindow({
+              content: '<div style="width:150px;text-align:center;padding:6px 0;">세무법인 로움</div>'
+          });
+          infowindow.open(map, marker);
+
+          // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+          map.setCenter(coords);
+          }
+      });
+
+      </script>
+  </div>
+</section>
+
+<!--<div id="contents">
   <section style="padding:3em 10em 3em 10em">
     <div class="content1" style="padding:2em 0 2em 4em">
       <p><strong><span style="font-size: 20px;">세무법인 로움 주소</span></strong><p>
         <p class="locationT"><span style="font-size: 15px;">서울특별시 강남구 도곡로 117 옥신타워 6층</br>117, Dogok-ro, Gangnam-gu, Seoul</br>TEL : 02-0000-0000 | FAX : 02-0000-0000</br>E-mail : 0000@0000.com</span></p>    </div>
     <div class="content2" id="mapCont">
       <div id="map" style="height:350px;"></div>
-      <!-- Kakao Map API Key -->
+      &lt;!&ndash; Kakao Map API Key &ndash;&gt;
       <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b019280304774ec961808b3a9f4846cb&libraries=services"></script>
       <script>
         var mapContainer = document.getElementById('map'); // 지도를 표시할 div
@@ -143,7 +194,7 @@ p.locationT {
       </script>
     </div>
   </section>
-</div>
+</div>-->
 <!-- Footer -->
 <footer class="wrapper style1 align-center">
   <div class="inner">
