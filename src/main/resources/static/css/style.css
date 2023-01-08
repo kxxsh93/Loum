@@ -4900,6 +4900,7 @@ color: rgb(45, 92, 158);}
 			width: 35%;
 			min-width: 25rem;
 			border-radius: 0;
+			margin-right: 10rem;
 		}
 
 			.spotlight.style1 .image img {
@@ -4923,7 +4924,7 @@ color: rgb(45, 92, 158);}
 		@media screen and (max-width: 1680px) {
 
 			.spotlight.style1 .content {
-				padding: 5rem 5rem 3rem 5rem ;
+				padding: 5rem 0rem 3rem 15rem ;
 			}
 
 		}
