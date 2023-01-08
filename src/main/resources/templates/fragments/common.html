@@ -108,14 +108,14 @@ a:active { text-decoration: none; }
       <li class="nav-item" th:classappend="${menu} == 'board'? 'active'">
         <a class="nav-link"  th:href="@{/list}">업무범위 <span class="sr-only" th:if="${menu} == 'board'">(current)</span></a>
       </li>
-      <li class="nav-item" th:classappend="${menu} == 'member'? 'active'">
-        <a class="nav-link"  th:href="@{/member}">구성원 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
+      <li class="nav-item" th:classappend="${menu} == 'specialist'? 'active'">
+        <a class="nav-link"  th:href="@{/specialist}">구성원 <span class="sr-only" th:if="${menu} == 'specialist'">(current)</span></a>
       </li>
-      <li class="nav-item" th:classappend="${menu} == 'resume'? 'active'">
-        <a class="nav-link"  th:href="@{/resume}">이력 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
+      <li class="nav-item" th:classappend="${menu} == 'skills'? 'active'">
+        <a class="nav-link"  th:href="@{/skills}">이력 <span class="sr-only" th:if="${menu} == 'skills'">(current)</span></a>
       </li>
-      <li class="nav-item" th:classappend="${menu} == 'howtocome'? 'active'">
-        <a class="nav-link" th:href="@{/howtocome}">오시는길 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
+      <li class="nav-item" th:classappend="${menu} == 'location'? 'active'">
+        <a class="nav-link" th:href="@{/location}">오시는길 <span class="sr-only" th:if="${menu} == 'location'">(current)</span></a>
       </li>
     </ul>
   </div>
