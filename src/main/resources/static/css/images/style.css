@@ -194,8 +194,7 @@ color: rgb(45, 92, 158);}
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
-		line-height: 0.8;
-		/*line-height: 1.375; 원본 크기*/
+		line-height: 1.375;
 		letter-spacing: -0.05em;
 		margin: 0 0 1rem 0;
 	}
@@ -232,7 +231,6 @@ color: rgb(45, 92, 158);}
 		font-size: 0.7rem;
 	}
 	h7 {
-	    font-size: 1.1rem;
         text-align: left;
         font-weight: bold;
 	}
@@ -2946,7 +2944,7 @@ color: rgb(45, 92, 158);}
 		}
 
 	table {
-		margin: 0 0 0 0;
+		margin: 0 0 2rem 0;
 		width: 100%;
 	}
 
